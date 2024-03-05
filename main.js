@@ -38,22 +38,26 @@ const slides = document.querySelectorAll(".slider .slide");
 let currentSlide = 0;
 
 const updateSlide = () => {
-  let prevSlide;
-  if (currentSlide < slides.length - 1) {
-    currentSlide++;
-    prevSlide = currentSlide - 1;
-  } else {
-    currentSlide = 0;
-    prevSlide = slides.length - 1;
-  }
+  // if (currentSlide < slides.length - 1) {
+  //   currentSlide++;
+  //   // prevSlide = currentSlide - 1;
+  // } else {
+  //   currentSlide = 0;
+  //   // prevSlide = slides.length - 1;
+  // }
+  currentSlide = (currentSlide + 1) % slides.length;
+  const prevSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
 
   slides.forEach((slide, index) => {
-    // slide.style.transform = `translateX(${60 * (index - currentSlide)}%)`;
-    slide.classList.remove("active", "prev");
+    // console.log(prevSlide, (prevSlide + 1) % slides.length);
+    slide.classList.remove("active", "prev", "slide-out");
     if (index === currentSlide) {
       slide.classList.add("active");
     } else if (prevSlide === index) {
       slide.classList.add("prev");
+    } else if (index === (prevSlide - 1 + slides.length) % slides.length) {
+      console.log("achi");
+      slide.classList.add("slide-out");
     }
   });
 };
