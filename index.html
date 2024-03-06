@@ -1,69 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">   
-<title>IEEE Website</title>
-</head>
-<body>
-
-
-<div class="event-section">
-    <div class="title">
-        <h2><span>Upcoming</span> Event</h2>
-    </div>
-    <div class="wrapper">
-        <div class="slider">
-            <div class="slide active"><img src="/417496720_122129061398176738_5152360014491081054_n.jpg" alt="" srcset=""></div>
-            <div class="slide"><img src="/428608975_813470564140346_3119655288788747631_n.jpg" alt="" srcset=""></div>
-            <div class="slide"><img src="/428699812_817232470430822_3672796228702654987_n.jpg" alt="" srcset=""></div>
-            <div class="slide"><img src="/430858252_819899103497492_753438531780433772_n.jpg" alt="" srcset=""></div>
-            <div class="slide"><img src="/430866151_819899663497436_3855873767756725001_n.jpg" alt="" srcset=""></div>
-            <div class="slide"><img src="/430870673_819898770164192_6054743429955625108_n.jpg" alt="" srcset=""></div>
-            <div class="slide"><img src="/430896664_818373966983339_8506501736667685736_n.jpg" alt="" srcset=""></div>
-            <div class="slide"><img src="/431312294_819899350164134_2190193390468296135_n.jpg" alt="" srcset=""></div>
-            <div class="slide prev"><img src="/430905592_819898523497550_2249855588110603515_n.jpg" alt="" srcset=""></div>
-        </div>
-        <div class="event-details-container">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IEEE BUB</title>
+        <link rel="icon" href="imgs/bub.png" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/index.css" />
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <!-- Font Awesome library -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- Make Animation When Scrolling -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Start Header -->
+        <div class="overlay"></div>
+        <div class="header">
             <div class="container">
-                <div class="title">Spirit 2024</div>
-                <div class="details">
-                    <div><i class="fa-regular fa-clock icon"></i>Saturday, 9 March 9:00 am</div>
-                    <div><i class="fa-solid fa-location-dot icon"></i>ICB - International College Of Benha</div>
+                <div class="logo">
+                    <img src="imgs/ieeewhite.png" alt />
                 </div>
-                <div class="countdown">
-                    <div class="box days">
-                        <span class="time">00</span>
-                        <span class="text">Days</span>
+                <nav>
+                    <div class="links">
+
+                        <span class="icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <div class="list">
+                            <ul>
+                                <li><a
+                                        href="#announce">Announcements</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li class="eve">
+                                    <a href="#events">Events</a>
+                                    <ul>
+                                        <li><a href="#events">Spirit</a></li>
+                                        <li><a href="#">Ghostech</a></li>
+                                        <li><a href="#">Mind Game</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#Team">Team</a></li>
+                                <div class="but">
+                                    <a href="#contact"><button
+                                            class="bt1">Contact Us</button></a>
+                                    <!-- <button class="bt2">Contact</button> -->
+                                </div>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="box hours">
-                        <span class="time">00</span>
-                        <span class="text">Hours</span>
-                    </div>
-                    <div class="box mins">
-                        <span class="time">00</span>
-                        <span class="text">mins</span>
-                    </div>
-                    <div class="box secs">
-                        <span class="time">00</span>
-                        <span class="text">secs</span>
+                </nav>
+            </div>
+        </div>
+        <div class="bigheader">
+            <div class="layer"></div>
+            <!-- End Header -->
+            <!-- Start Intro Section -->
+            <div class="intro">
+                <div class="container">
+                    <div class="content">
+                        <div
+                            class="text"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-once="true">
+                            <h2>Hi, Friend</h2>
+                            <p>
+                                Come and see how our journey is going, maybe
+                                you'll be a part of
+                                it one day.
+                            </p>
+                        </div>
+                        <div
+                            class="logo"
+                            data-aos="fade-down"
+                            data-aos-duration="1200"
+                            data-aos-once="true">
+                            <img src="imgs/ieee.png" alt width="400px" />
+                        </div>
                     </div>
                 </div>
-                <div class="tickets">
-                    <button>Book your seats</button>
+            </div>
+            <!-- End Intro Section -->
+        </div>
+        <!-- Start Announce Section -->
+        <div class="announce" id="announce">
+            <div class="container">
+                <div class="special-heading">
+                    <p>Keep up with our news</p>
+                    <h2>ANNOUNCEMENTS</h2>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <h2><span>IEEE</span> App is now live</h2>
+                        <p>
+                            Embark on a transformative journey with the IEEE BUB
+                            SB mobile
+                            application, designed to revolutionize how you
+                            navigate the world
+                            of technology and engineering. This dynamic app
+                            serves as your
+                            digital hub, offering a plethora of features to
+                            enrich your
+                            academic and professional pursuits.
+                        </p>
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.ieee.bub.sb.ieee_bub_sb"
+                            target="_blank">
+                            <div class="but">
+                                <button class="bt1">Download From Googleplay</button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="phone">
+                        <img src="imgs/Cross-platform software.gif" alt
+                            class="gif" />
+                        <img
+                            src="imgs/app-icon.png"
+                            alt
+                            class="appicon"
+                            data-aos="fade-in"
+                            data-aos-delay="200"
+                            data-aos-duration="1200"
+                            data-aos-once="true" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-    <script src="https://kit.fontawesome.com/d109a23a31.js" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-
-</body>
+        <!-- End Announce Section -->
+        <!--  Start About Section -->
+        <div class="container">
+            <div class="yasmeen_container1" id="about">
+                <div class="special-heading">
+                    <p>A brief overview of our committees</p>
+                    <h2>Our Committees</h2>
+                </div>
+                <div class="yasmeen_subtitle">
+                    <span>Techinical:</span>
+                </div>
+                <div class="yasmeen_icons">
+                    <ul class="yicons">
+                        <li class="yasmeen_list">
+                            <a class="a" href>
+                                <i class="fa-solid fa-code"></i>
+                                <p>Problem-Solving</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <p>Web</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-gear"></i>
+                                <p>Arduino</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-microchip"></i>
+                                <p>Embedded</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <p>Flutter</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="yasmeen_subtitle">
+                    <span>Non-Techinical:</span>
+                </div>
+                <div class="yasmeen_icons">
+                    <ul class="yicons">
+                        <li>
+                            <a class="a" href>
+                                <i class="fa-solid fa-users"></i>
+                                <p>HR</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <p>PR</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-comments-dollar"></i>
+                                <p>FR</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <p>Logistics</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href class="a">
+                                <i class="fa-solid fa-video"></i>
+                                <p>Media</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  End About Section -->
+        <!--  Start Events Section -->
+        <div class="event-section" id="events">
+            <div class="special-heading">
+                <p>Discover Our Events</p>
+                <h2>Upcoming Events</h2>
+            </div>
+            <div class="wrapper">
+                <div class="slider">
+                    
+                    <div class="slide active">
+                        <img
+                            src="/imgs/428608975_813470564140346_3119655288788747631_n.png"
+                            alt
+                            srcset />
+                    </div>
+                    <div class="slide">
+                        <img
+                            src="/imgs/428699812_817232470430822_3672796228702654987_n.png"
+                            alt
+                            srcset />
+                    </div>
+                    <div class="slide">
+                        <img
+                            src="/imgs/430858252_819899103497492_753438531780433772_n.png"
+                            alt
+                            srcset />
+                    </div>
+                    <div class="slide">
+                        <img
+                            src="/imgs/430866151_819899663497436_3855873767756725001_n.png"
+                            alt
+                            srcset />
+                    </div>
+                    <div class="slide">
+                        <img
+                            src="/imgs/430870673_819898770164192_6054743429955625108_n.png"
+                            alt
+                            srcset />
+                    </div>
+                    <div class="slide">
+                        <img
+                            src="/imgs/430896664_818373966983339_8506501736667685736_n.png"
+                            alt
+                            srcset />
+                    </div>
+                    <div class="slide">
+                        <img
+                            src="/imgs/431312294_819899350164134_2190193390468296135_n.png"
+                            alt
+                            srcset />
+                    </div>
+                    <div class="slide prev">
+                        <img
+                            src="/imgs/430905592_819898523497550_2249855588110603515_n.png"
+                            alt
+                            srcset />
+                    </div>
+                </div>
+                <div class="event-details-container">
+                    <div class="container">
+                        <div class="title">Spirit 2024</div>
+                        <div class="details">
+                            <div>
+                                <i
+                                    class="fa-regular fa-clock icon"></i>Saturday,
+                                9 March 9:00
+                                am
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-location-dot icon"></i>ICB
+                                - International
+                                College Of Benha
+                            </div>
+                        </div>
+                        <div class="countdown">
+                            <div class="box days">
+                                <span class="time">00</span>
+                                <span class="text">Days</span>
+                            </div>
+                            <div class="box hours">
+                                <span class="time">00</span>
+                                <span class="text">Hours</span>
+                            </div>
+                            <div class="box mins">
+                                <span class="time">00</span>
+                                <span class="text">mins</span>
+                            </div>
+                            <div class="box secs">
+                                <span class="time">00</span>
+                                <span class="text">secs</span>
+                            </div>
+                        </div>
+                        <div class="tickets">
+                            <button>Book your seats</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  End Events Section -->
+        <script
+            src="https://kit.fontawesome.com/d109a23a31.js"
+            crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <!-- <script src="index.js"></script> -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+    </script>
+    </body>
 </html>

@@ -38,13 +38,6 @@ const slides = document.querySelectorAll(".slider .slide");
 let currentSlide = 0;
 
 const updateSlide = () => {
-  // if (currentSlide < slides.length - 1) {
-  //   currentSlide++;
-  //   // prevSlide = currentSlide - 1;
-  // } else {
-  //   currentSlide = 0;
-  //   // prevSlide = slides.length - 1;
-  // }
   currentSlide = (currentSlide + 1) % slides.length;
   const prevSlide = currentSlide === 0 ? slides.length - 1 : currentSlide - 1;
 
@@ -79,4 +72,27 @@ sliderContainer.addEventListener("mouseover", () => {
 sliderContainer.addEventListener("mouseleave", () => {
   startSlideShow();
   //   document.querySelector(".event-details-container").style.opacity = "1";
+});
+
+// Navbar
+
+const navEl = document.querySelector(".links");
+const navIcon = document.querySelector(".links .icon");
+const overlayEl = document.querySelector(".overlay");
+
+const removeNav = () => {
+  navEl.classList.remove("active");
+  overlayEl.classList.remove("show");
+};
+
+navIcon.addEventListener("click", () => {
+  navEl.classList.toggle("active");
+  overlayEl.classList.toggle("show");
+});
+
+overlayEl.addEventListener("click", () => {
+  removeNav();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") removeNav();
 });
