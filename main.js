@@ -3,7 +3,7 @@ const hoursEl = document.querySelector(".countdown .hours .time");
 const minsEl = document.querySelector(".countdown .mins .time");
 const secEl = document.querySelector(".countdown .secs .time");
 
-const eventDate = new Date("2024 3 9 9:00").getTime();
+const eventDate = new Date("2024 3 22 9:00").getTime();
 const min = 60 * 1000;
 const hour = 60 * min;
 const day = 24 * hour;
@@ -31,7 +31,7 @@ const countdown = () => {
 
 let timer = setInterval(countdown, 1000);
 
-//SlideShow
+// auto SlideShow
 const sliderContainer = document.querySelector(".slider");
 const slides = document.querySelectorAll(".slider .slide");
 
@@ -67,12 +67,12 @@ startSlideShow();
 
 sliderContainer.addEventListener("mouseover", () => {
   stopSlideShow();
-  //   document.querySelector(".event-details-container").style.opacity = ".8";
 });
 sliderContainer.addEventListener("mouseleave", () => {
   startSlideShow();
-  //   document.querySelector(".event-details-container").style.opacity = "1";
 });
+
+// end auto slideShow
 
 // Navbar
 
@@ -95,4 +95,47 @@ overlayEl.addEventListener("click", () => {
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") removeNav();
+});
+
+const headsSlides = document.querySelectorAll(".yasmeen-heads .heads-slides .filter");
+const headsSlidesContainer = document.querySelector(".yasmeen-heads .heads-slides");
+
+// heads section slider
+let currHeadsSlide = 0;
+
+const updateSlideShow = (direction = "auto") => {
+  let size = 4;
+  if (window.innerWidth < 860) {
+    size = 3;
+  }
+  const headSlideWidth = headsSlides[0].clientWidth;
+
+  if (direction === "auto") {
+    if (currHeadsSlide < headsSlides.length - size) {
+      currHeadsSlide = currHeadsSlide + 1;
+    } else {
+      currHeadsSlide = 0;
+    }
+    headsSlidesContainer.style.transform = `translateX(-${
+      currHeadsSlide * headSlideWidth
+    }px)`;
+  }
+};
+
+let headerSliderShow;
+const startHeadsSlider = () => {
+  headerSliderShow = setInterval(updateSlideShow, 3000);
+};
+
+const stopHeadsSlider = () => {
+  clearInterval(headerSliderShow);
+};
+
+headsSlidesContainer.addEventListener("mouseover", () => {
+  console.log("entered");
+  stopHeadsSlider();
+});
+headsSlidesContainer.addEventListener("mouseleave", () => {
+  console.log("left");
+  startHeadsSlider();
 });
