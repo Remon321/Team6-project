@@ -111,11 +111,8 @@ const updateSlideShow = (direction = "auto") => {
   const headSlideWidth = headsSlides[0].clientWidth;
 
   if (direction === "auto") {
-    if (currHeadsSlide < headsSlides.length - size) {
-      currHeadsSlide = currHeadsSlide + 1;
-    } else {
-      currHeadsSlide = 0;
-    }
+    currHeadsSlide = (currHeadsSlide + 1) % (headsSlides.length - 3);
+
     headsSlidesContainer.style.transform = `translateX(-${
       currHeadsSlide * headSlideWidth
     }px)`;
@@ -124,7 +121,7 @@ const updateSlideShow = (direction = "auto") => {
 
 let headerSliderShow;
 const startHeadsSlider = () => {
-  headerSliderShow = setInterval(updateSlideShow, 3000);
+  headerSliderShow = setInterval(updateSlideShow, 2200);
 };
 
 const stopHeadsSlider = () => {
@@ -139,3 +136,4 @@ headsSlidesContainer.addEventListener("mouseleave", () => {
   console.log("left");
   startHeadsSlider();
 });
+startHeadsSlider();
